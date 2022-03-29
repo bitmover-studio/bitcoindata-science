@@ -1,9 +1,28 @@
+import { Routes, Route} from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import NotFound from './pages/NotFound';
+import Converter from './pages/Converter';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
+      <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<Home />} />
+          <Route path="converter" element={<Converter />} />
+
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </div>
+  )
+}
+
+function Home() {
+  return (
+    <div>
       <header className="App-header">
         <img src={logo} className="App-logo mb-4" alt="logo" />
         <p>
@@ -21,5 +40,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
