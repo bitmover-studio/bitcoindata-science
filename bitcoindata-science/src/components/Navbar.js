@@ -24,8 +24,8 @@ const NavBar = () => {
           </Navbar.Brand>
           <div className="d-none d-lg-block  me-auto ">
             <Nav className="my-2 my-lg-0justify-content-evenly" style={{ maxHeight: '100px' }}>
-              <Nav.Link as={NavLink} to="/" activeClassName="active" exact >Home</Nav.Link>
-              <Nav.Link as={NavLink} to="/converter" activeClassName="active">Unit Converter</Nav.Link>
+              <Nav.Link as={NavLink} to="/" >Home</Nav.Link>
+              <Nav.Link as={NavLink} to="/converter" >Unit Converter</Nav.Link>
 
             </Nav>
           </div>
@@ -40,8 +40,8 @@ const NavBar = () => {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="mr-auto ml-3 mt-4 pt-4 my-lg-0">
-                <div className="mr-auto my-4"><Nav.Link as={NavLink} to="/" className="text-primary" activeClassName="active" exact onClick={handleClose}>Moedas</Nav.Link></div>
-                <div className="mr-auto my-4"><Nav.Link as={NavLink} to="/converter" className="text-primary" activeClassName="active" onClick={handleClose}>Unit Converter</Nav.Link></div>
+                <div className="mr-auto my-4"><Nav.Link as={NavLink} to="/" className="text-primary" onClick={handleClose}>Moedas</Nav.Link></div>
+                <div className="mr-auto my-4"><Nav.Link as={NavLink} to="/converter" className="text-primary" onClick={handleClose}>Unit Converter</Nav.Link></div>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
